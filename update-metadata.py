@@ -15,4 +15,6 @@ with fileinput.FileInput('metadata.rb', inplace=True) as file:
         dependsfound = re.search(r"depends \'(.*)\',", line)
         if dependsfound:
             version = cookbooks[dependsfound.group(1)]['versions'][0]['version']
+        else:
+            version = ''
         print(re.sub(r"~> (.*)\'", "~> %s'" % version, line), end='')
