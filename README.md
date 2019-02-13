@@ -1,2 +1,2 @@
-# bash-scripts
-simple repo to store bash scripts
+# scripts
+simple repo to store scripts
